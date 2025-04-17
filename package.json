@@ -1,0 +1,18 @@
+{
+  "name": "awstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:storefront": "pnpm --filter storefront dev",
+    "dev:storefront-studio": "pnpm --filter storefront-studio dev",
+    "dev": "concurrently -n \"storefront,studio\" -c \"magenta.bold,red.bold\" \"pnpm run dev:storefront\" \"pnpm run dev:storefront-studio\""
+  },
+  "keywords": [],
+  "author": "Allwell Onen",
+  "license": "MIT",
+  "packageManager": "pnpm@10.6.5",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
