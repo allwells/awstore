@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:storefront": "pnpm --filter storefront dev",
-    "dev:storefront-studio": "pnpm --filter storefront-studio dev",
-    "dev": "concurrently -n \"storefront,studio\" -c \"magenta.bold,red.bold\" \"pnpm run dev:storefront\" \"pnpm run dev:storefront-studio\""
+    "build:store": "pnpm --filter store build",
+    "build:store-studio": "pnpm --filter store-studio build",
+    "build": "concurrently -n \"store,studio\" -c \"magenta.bold,red.bold\" \"pnpm run build:store\" \"pnpm run build:store-studio\"",
+    "dev:store": "pnpm --filter store dev",
+    "dev:store-studio": "pnpm --filter store-studio dev",
+    "dev": "concurrently -n \"store,studio\" -c \"magenta.bold,red.bold\" \"pnpm run dev:store\" \"pnpm run dev:store-studio\""
   },
   "keywords": [],
   "author": "Allwell Onen",
