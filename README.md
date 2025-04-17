@@ -20,6 +20,7 @@ The project utilizes a monorepo structure to manage the frontend application (bu
 ├── store-studio/  # Sanity Studio for content and product management
 │   ├── schemas/
 │   ├── static/
+│   ├── utils/
 │   └── ...
 ├── package.json
 ├── pnpm-lock.yaml
@@ -91,12 +92,12 @@ Follow these steps to set up and run the project locally:
     ```markdown
     # Sanity CMS
     SANITY_API_VERSION=<your-sanity-api-version>
-    SANITY_PROJECT_ID=<your-sanity-project-id>
     SANITY_DATASET=<your-sanity-dataset>
+    SANITY_PROJECT_ID=<your-sanity-project-id>
     SANITY_API_TOKEN=<your-sanity-api-token>
 
     # Airtable
-    AIRTABLE_ACCESS_TOKEN=<your-airtable-access-token>
+    AIRTABLE_API_KEY=<your-airtable-api-key>
     AIRTABLE_BASE_ID=<your-airtable-base-id>
     ```
 
@@ -109,7 +110,7 @@ Follow these steps to set up and run the project locally:
 ## Important Notes
 
 - **Sanity API Token:** Ensure your Sanity API token has the necessary permissions to read and potentially write data, depending on your application's needs. Keep this token secure and do not expose it on the client-side.
-- **Airtable Access Token:** Similarly, keep your Airtable access token secure.
+- **Airtable API Key:** Similarly, keep your Airtable API Key.
 - **Schema Configuration:** Define your product and content schemas in the `store-studio/schemas` directory to match the data you want to manage in Sanity.
 - **Frontend Data Fetching:** Implement data fetching in your Next.js application to retrieve product and content data from Sanity.
 - **Order Handling:** Implement the logic to send order data to Airtable when a user completes a purchase.
